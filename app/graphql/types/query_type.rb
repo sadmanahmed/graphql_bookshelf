@@ -13,5 +13,18 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :author, Types::AuthorType, null: true , description: "Returns one Author instance" do
+      argument :id, ID, required: true
+    end
+
+    def author(id:)
+      Author.where(id: id).first
+    end
+
+    field :all_author, [AuthorType], null: true , description: "Returns all Authors instance"
+    def all_author
+      Author.all
+    end
   end
 end
