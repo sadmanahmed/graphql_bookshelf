@@ -8,7 +8,7 @@ class Types::AuthorType < Types::BaseObject
   field :is_alive, Boolean, null: true
   field :created_at, GraphQL::Types::ISO8601DateTime, null: false
   field :full_name, String, null: false
-
+  field :coordinates, Types::CoordinatesType, null: false
 
 
 
