@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_044912) do
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
     t.integer "yob", null: false
-    t.boolean "is_alive", null: false
+    t.boolean "is_alive", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
