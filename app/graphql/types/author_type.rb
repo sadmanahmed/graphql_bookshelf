@@ -9,6 +9,7 @@ class Types::AuthorType < Types::BaseObject
   field :created_at, GraphQL::Types::ISO8601DateTime, null: false
   field :full_name, String, null: false
   field :coordinates, Types::CoordinatesType, null: false
+  field :publications_years, [Int], null: false
 
 
 
